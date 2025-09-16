@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja Zleceniodawcy - HIRE SHOW</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/register_client.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="../index.html">Strona główna</a>
+            <a href="register_first.html">Powrót</a>
+            <a href="login.html">Logowanie</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="client-form-section">
+                <h2>Rejestracja Zleceniodawcy</h2>
+                
+                <div id="message-container" style="display: none;"></div>
+                
+                <form id="client-form" class="client-form">
+                    <div class="form-section">
+                        <h3>Dane logowania</h3>
+                        <div class="form-group">
+                            <label for="email">Adres email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Hasło *</label>
+                                <input type="password" id="password" name="password" required minlength="8">
+                                <small>Minimum 8 znaków</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Potwierdź hasło *</label>
+                                <input type="password" id="confirm_password" name="confirm_password" required>
+                                <small>Powtórz hasło</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Dane firmy/organizacji</h3>
+                        <div class="form-group">
+                            <label for="client_name">Nazwa firmy/organizacji *</label>
+                            <input type="text" id="client_name" name="client_name" required>
+                            <small>Nazwa pod jaką będziesz widoczny dla artystów</small>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client_nip">NIP (opcjonalne)</label>
+                                <input type="text" id="client_nip" name="client_nip" placeholder="0000000000" inputmode="numeric" pattern="[0-9]{10}" title="Wpisz dokładnie 10 cyfr bez znaków dodatkowych">
+                                <small>Wpisz 10 cyfr (bez spacji i myślników). Podaj tylko jeśli potrzebujesz faktury VAT.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon kontaktowy</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789">
+                                <small>Dla pilnych kontaktów</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                Akceptuję <a href="regulamin.html" target="_blank">Regulamin</a> 
+                                oraz <a href="polityka_prywatnosci.html" target="_blank">Politykę Prywatności</a> *
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Zarejestruj się</span>
+                            <span class="btn-loader" style="display: none;">Rejestracja...</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/register_client.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edytuj Profil - Artysta - HIRE SHOW</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/account.css">
+    <link rel="stylesheet" href="../assets/css/edit_profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="my_account_artist.html">Powrót</a>
+            <a href="../index.html">Strona główna</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="edit-profile-header">
+                <h1>Edytuj Profil Artysty</h1>
+                <p>Zaktualizuj swoje dane osobowe i informacje artystyczne</p>
+            </div>
+
+            <form id="edit-profile-form" class="edit-profile-form">
+                <div class="form-sections">
+                    <!-- Sekcja danych osobowych -->
+                    <div class="form-section">
+                        <h3>Dane osobowe</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">Imię *</label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Nazwisko *</label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="residence">Miejsce zamieszkania</label>
+                                <input type="text" id="residence" name="residence" placeholder="np. Warszawa">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Kraj</label>
+                            <select id="country" name="country">
+                                <option value="">Wybierz kraj</option>
+                                <option value="Polska">Polska</option>
+                                <option value="Niemcy">Niemcy</option>
+                                <option value="Wielka Brytania">Wielka Brytania</option>
+                                <option value="Francja">Francja</option>
+                                <option value="Hiszpania">Hiszpania</option>
+                                <option value="Włochy">Włochy</option>
+                                <option value="Czechy">Czechy</option>
+                                <option value="Słowacja">Słowacja</option>
+                                <option value="Holandia">Holandia</option>
+                                <option value="Belgia">Belgia</option>
+                                <option value="Austriia">Austria</option>
+                                <option value="Szwajcaria">Szwajcaria</option>
+                                <option value="Inny">Inny</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Informacje artystyczne</h3>
+                        
+                        <div class="form-group">
+                            <label for="artist_type">Typ artysty *</label>
+                            <select id="artist_type" name="artist_type" required>
+                                <option value="">Wybierz typ</option>
+                                <option value="influencer">Influencer</option>
+                                <option value="actor">Aktor</option>
+                                <option value="model">Model</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Wiek</label>
+                                <input type="number" id="age" name="age" min="1" max="120" placeholder="np. 24">
+                            </div>
+                            <div class="form-group">
+                                <label for="height">Wzrost (cm)</label>
+                                <input type="number" id="height" name="height" min="50" max="250" placeholder="np. 175">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weight">Waga (kg)</label>
+                                <input type="number" id="weight" name="weight" min="30" max="250" placeholder="np. 65">
+                            </div>
+                            <div class="form-group">
+                                <label for="hip">Biodra (cm)</label>
+                                <input type="number" id="hip" name="hip" min="50" max="200" placeholder="np. 90">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="waist">Talia (cm)</label>
+                                <input type="number" id="waist" name="waist" min="40" max="200" placeholder="np. 60">
+                            </div>
+                            <div class="form-group">
+                                <label for="cage">Klatka piersiowa (cm)</label>
+                                <input type="number" id="cage" name="cage" min="50" max="200" placeholder="np. 90">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="shoe_size">Rozmiar buta (EU)</label>
+                                <input type="number" id="shoe_size" name="shoe_size" min="20" max="55" placeholder="np. 42">
+                            </div>
+                            <div class="form-group">
+                                <label for="clothes_size">Rozmiar ubrań</label>
+                                <input type="number" id="clothes_size" name="clothes_size" min="30" max="70" placeholder="np. 38">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="eyes_color">Kolor oczu</label>
+                                <input type="text" id="eyes_color" name="eyes_color" placeholder="np. niebieskie">
+                            </div>
+                            <div class="form-group">
+                                <label for="hair_color">Kolor włosów</label>
+                                <input type="text" id="hair_color" name="hair_color" placeholder="np. blond">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience_info">Opis doświadczenia (max 255 znaków)</label>
+                            <textarea id="experience_info" name="experience_info" rows="3" maxlength="255" placeholder="Krótki opis doświadczenia..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bio">Bio / O mnie</label>
+                            <textarea id="bio" name="bio" rows="4" placeholder="Krótki opis siebie, swoich zainteresowań i stylu pracy..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Social Media</h3>
+                        
+                        <div class="form-group">
+                            <label for="online_reach">Zasięg online (ilość obserwujących)</label>
+                            <input type="number" id="online_reach" name="online_reach" min="0" placeholder="np. 10000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="instagram">Instagram</label>
+                            <input type="text" id="instagram" name="instagram" placeholder="@nazwa_profilu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tiktok">TikTok</label>
+                            <input type="text" id="tiktok" name="tiktok" placeholder="@nazwa_profilu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="facebook">Facebook</label>
+                            <input type="text" id="facebook" name="facebook" placeholder="nazwa_profilu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="youtube">YouTube</label>
+                            <input type="text" id="youtube" name="youtube" placeholder="nazwa_kanału">
+                        </div>
+
+                        
+
+                        <div class="form-group">
+                            <label for="short_video">Link do krótkiego wideo prezentacyjnego</label>
+                            <input type="url" id="short_video" name="short_video" placeholder="https://example.com/video.mp4">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Zdjęcia portfolio</h3>
+                        <p class="section-note">Dodaj do 5 zdjęć (JPG/PNG, max 5MB, max 4000x4000). Najpierw wgraj i poczekaj na przetworzenie, a potem Zapisz.</p>
+                        <div class="form-group">
+                            <button type="button" id="pick-photos-btn" class="btn btn-secondary">Wybierz zdjęcia</button>
+                            <input type="file" id="photos-input" accept="image/jpeg,image/png" multiple style="display:none;" />
+                        </div>
+                        <div id="photos-grid" class="photos-grid"></div>
+                        <div id="photos-error" class="error-message" style="display:none;"></div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Bezpieczeństwo</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="new_password">Nowe hasło</label>
+                                <input type="password" id="new_password" name="new_password" placeholder="min. 8 znaków">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_new_password">Powtórz nowe hasło</label>
+                                <input type="password" id="confirm_new_password" name="confirm_new_password" placeholder="powtórz nowe hasło">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section confirmation-section">
+                        <h3>Potwierdzenie zmian</h3>
+                        <p class="section-note">Aby zapisać zmiany, wpisz swoje aktualne hasło</p>
+                        
+                        <div class="form-group">
+                            <label for="password">Hasło *</label>
+                            <input type="password" id="password" name="password" required placeholder="Wpisz swoje aktualne hasło">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="my_account_artist.html" class="btn btn-secondary">Anuluj</a>
+                    <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+                </div>
+            </form>
+
+            <div id="loading-spinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Zapisywanie zmian...</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/edit_profile_artist.js"></script>
+</body>
+</html>

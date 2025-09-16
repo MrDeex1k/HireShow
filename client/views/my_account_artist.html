@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Konto - Artysta - HIRE SHOW</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/account.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="#" id="logout-btn">Wyloguj</a>
+            <a href="../index.html">Strona główna</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="account-header">
+                <h1>Panel Artysty</h1>
+                <p id="welcome-message">Witaj, <span id="user-name">Artysto</span>!</p>
+            </div>
+
+            <div class="account-sections">
+                <div class="section-card">
+                    <h3>Mój Profil</h3>
+                    <p>Zarządzaj swoimi danymi osobowymi i informacjami artystycznymi</p>
+                    <a href="edit_profile_artist.html" class="btn btn-primary">Edytuj Profil</a>
+                </div>
+
+                <div class="section-card">
+                    <h3>Ustawienia</h3>
+                    <p>Zmień hasło i preferencje powiadomień</p>
+                    <button class="btn btn-secondary">Ustawienia</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/my_account_artist.js"></script>
+</body>
+</html>

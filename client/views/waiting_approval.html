@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oczekiwanie na zatwierdzenie - HIRE SHOW</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/waiting_approval.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="../index.html">Strona główna</a>
+            <a href="login.html">Logowanie</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="approval-container">
+                <div class="approval-icon">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#FFA500" stroke-width="2" fill="none"/>
+                        <path d="M12 6v6l4 2" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <h1>OCZEKIWANIE NA WERYFIKACJĘ</h1>
+                
+                <div class="approval-message">
+                    <p><strong>TWOJE ZGŁOSZENIE OCZEKUJE NA WERYFIKACJĘ.</strong></p>
+                    <p>Zostanie ona zakończona w ciągu 24h.</p>
+                    <p>Dziękujemy za cierpliwość.</p>
+                </div>
+                
+                <div class="approval-actions">
+                    <a href="../index.html" class="btn btn-primary">Powrót do strony głównej</a>
+                    <a href="login.html" class="btn btn-secondary">Spróbuj zalogować się ponownie</a>
+                </div>
+                
+                <div class="additional-info">
+                    <h3>Co się dzieje z Twoim zgłoszeniem?</h3>
+                    <ol>
+                        <li>Twoje dane zostały przesłane do weryfikacji</li>
+                        <li>Nasz zespół sprawdza informacje w ciągu 24 godzin</li>
+                        <li>Po zatwierdzeniu będziesz mógł się zalogować</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Artysty - HIRE SHOW</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/register_form_artist.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="../index.html">Strona główna</a>
+            <a href="register_artist_choose.html">Powrót</a>
+            <a href="login.html">Logowanie</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="artist-form-section">
+                <h2 id="form-title">Formularz Artysty - MODEL</h2>
+                <form id="artist-form" class="artist-form">
+                    <!-- Dane podstawowe -->
+                    <div class="form-section">
+                        <h3>Dane podstawowe</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">Imię *</label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Nazwisko *</label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="residence">Miejsce zamieszkania *</label>
+                                <input type="text" id="residence" name="residence" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Kraj *</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Atrybuty fizyczne</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Wiek</label>
+                                <input type="number" id="age" name="age" min="1" max="120" placeholder="np. 24">
+                            </div>
+                            <div class="form-group">
+                                <label for="height">Wzrost (cm)</label>
+                                <input type="number" id="height" name="height" min="50" max="250" placeholder="np. 175">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weight">Waga (kg)</label>
+                                <input type="number" id="weight" name="weight" min="30" max="250" placeholder="np. 65">
+                            </div>
+                            <div class="form-group">
+                                <label for="hip">Biodra (cm)</label>
+                                <input type="number" id="hip" name="hip" min="50" max="200" placeholder="np. 90">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="waist">Talia (cm)</label>
+                                <input type="number" id="waist" name="waist" min="40" max="200" placeholder="np. 60">
+                            </div>
+                            <div class="form-group">
+                                <label for="cage">Klatka piersiowa (cm)</label>
+                                <input type="number" id="cage" name="cage" min="50" max="200" placeholder="np. 90">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="shoe_size">Rozmiar buta (EU)</label>
+                                <input type="number" id="shoe_size" name="shoe_size" min="20" max="55" placeholder="np. 42">
+                            </div>
+                            <div class="form-group">
+                                <label for="clothes_size">Rozmiar ubrań</label>
+                                <input type="number" id="clothes_size" name="clothes_size" min="30" max="70" placeholder="np. 38">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="eyes_color">Kolor oczu</label>
+                                <input type="text" id="eyes_color" name="eyes_color" placeholder="np. niebieskie">
+                            </div>
+                            <div class="form-group">
+                                <label for="hair_color">Kolor włosów</label>
+                                <input type="text" id="hair_color" name="hair_color" placeholder="np. blond">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Doświadczenie</h3>
+                        <div class="form-group">
+                            <label for="experience_info">Opis doświadczenia (Wymagane, Max 255 znaków)</label>
+                            <textarea id="experience_info" name="experience_info" rows="3" maxlength="255" placeholder="Krótki opis doświadczenia..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Biografia / O sobie</label>
+                            <textarea id="bio" name="bio" rows="4" placeholder="Opowiedz o sobie, swoich pasjach i celach zawodowych..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Social Media</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="instagram">Instagram</label>
+                                <input type="text" id="instagram" name="instagram" placeholder="@nazwa_użytkownika">
+                            </div>
+                            <div class="form-group">
+                                <label for="tiktok">TikTok</label>
+                                <input type="text" id="tiktok" name="tiktok" placeholder="@nazwa_użytkownika">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="facebook">Facebook</label>
+                                <input type="text" id="facebook" name="facebook" placeholder="Link do profilu">
+                            </div>
+                            <div class="form-group">
+                                <label for="youtube">YouTube</label>
+                                <input type="text" id="youtube" name="youtube" placeholder="Link do kanału">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="online_reach">Zasięg online (liczba obserwatorów)</label>
+                            <input type="number" id="online_reach" name="online_reach" min="0" placeholder="0">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Materiały</h3>
+                        <div class="form-group">
+                            <label for="short_video">Link do krótkiego video prezentującego</label>
+                            <input type="url" id="short_video" name="short_video" placeholder="https://example.com/video.mp4">
+                        </div>
+                        <div class="form-group">
+                            <h4>Zdjęcia (JPG/PNG, max 5)</h4>
+                            <p class="section-note">Po rejestracji możesz od razu dodać zdjęcia. Najpierw je wgraj i poczekaj na przetworzenie, potem rejestracja zakończy się sukcesem.</p>
+                            <button type="button" id="pick-photos-btn" class="submit-btn" style="margin-bottom: 10px;">Wybierz zdjęcia</button>
+                            <input type="file" id="photos-input" accept="image/jpeg,image/png" multiple style="display: none;" />
+                            <div id="photos-grid" class="photos-grid" aria-live="polite"></div>
+                            <div id="photos-error" class="error-message" style="display:none;"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Zarejestruj artystę</button>
+                </form>
+                <div id="artist-error-message" class="error-message" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/register_form_artist.js"></script>
+</body>
+</html>

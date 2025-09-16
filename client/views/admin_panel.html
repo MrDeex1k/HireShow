@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administracyjny - HIRE SHOW</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/account.css">
+    <link rel="stylesheet" href="../assets/css/admin_panel.css">
+</head>
+
+<body class="page-admin">
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="#" id="logout-btn">Wyloguj</a>
+            <a href="../index.html">Strona główna</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <img class="decor-image left" alt="Dekoracja lewa" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAOqTt6EAAAAASUVORK5CYII=">
+            <img class="decor-image right" alt="Dekoracja prawa" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAOqTt6EAAAAASUVORK5CYII=">
+            <div class="account-header">
+                <h1>Panel Administracyjny</h1>
+                <p id="welcome-message">Witaj, <span id="user-name">Administratorze</span>!</p>
+                <div class="admin-badge">
+                    <span>🛡️ Administrator</span>
+                </div>
+            </div>
+
+            <div class="account-sections">
+                <div class="section-card admin-card">
+                    <h3>Oczekujący</h3>
+                    <p>Zarządzaj użytkownikami oczekującymi na zatwierdzenie</p>
+                    <button class="btn btn-primary" id="manage-pending-btn">Zarządzaj Oczekującymi</button>
+                </div>
+
+                <div class="section-card admin-card">
+                    <h3>Odrzuceni</h3>
+                    <p>Przeglądaj i zarządzaj odrzuconymi użytkownikami</p>
+                    <button class="btn btn-primary" id="manage-rejected-btn">Zarządzaj Odrzuconymi</button>
+                </div>
+
+                <div class="section-card admin-card">
+                    <h3>Wyszukiwarka Artystów</h3>
+                    <p>Wyszukaj artystów</p>
+                    <a class="btn btn-primary" href="find_artists.html">Otwórz Wyszukiwarkę</a>
+                </div>
+            </div>
+
+            <div id="pending-users-section" class="admin-section" style="display: none;">
+                <div class="section-header">
+                    <h2>Użytkownicy oczekujący na zatwierdzenie</h2>
+                    <button class="btn btn-secondary" id="back-to-main">Powrót do panelu głównego</button>
+                </div>
+                
+                <div id="pending-users-list" class="users-list">
+                </div>
+            </div>
+
+            <div id="rejected-users-section" class="admin-section" style="display: none;">
+                <div class="section-header">
+                    <h2>Odrzuceni użytkownicy</h2>
+                    <button class="btn btn-secondary" id="back-to-main-rejected">Powrót do panelu głównego</button>
+                </div>
+                
+                <div id="rejected-users-list" class="users-list">
+                </div>
+            </div>
+
+            <div id="user-details-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Szczegóły użytkownika</h2>
+                    <div id="user-details-content">
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-success" id="approve-user">ACCEPT</button>
+                        <button class="btn btn-danger" id="reject-user">CANCEL</button>
+                        <button class="btn btn-warning" id="reactivate-user" style="display: none;">REAKTYWUJ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/admin_panel.js"></script>
+    <script src="../assets/js/decorImages.js"></script>
+</body>
+</html>

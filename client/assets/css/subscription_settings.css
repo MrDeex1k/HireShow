@@ -1,0 +1,310 @@
+/* Ustawienia Subskrypcji - Styles */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.subscription-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subscription-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subscription-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+.current-plan {
+    background: rgba(76, 175, 80, 0.2);
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.current-plan h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.current-plan p {
+    margin: 0 0 1rem 0;
+    opacity: 0.9;
+}
+
+.plan-status {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: 600;
+    color: #81C784;
+}
+
+/* Dodatkowe style dla przycisków i odznak */
+.current-plan-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.premium-badge {
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.select-plan-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.35);
+    margin-top: 1rem;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.select-plan-btn:hover {
+    background: linear-gradient(135deg, #c82333, #a71e2a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(220, 53, 69, 0.45);
+}
+
+.billing-section,
+.payment-methods {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.billing-section h3,
+.payment-methods h3 {
+    color: white;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.3rem;
+}
+
+.billing-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.billing-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.billing-date {
+    font-weight: 600;
+    color: white;
+}
+
+.billing-plan {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.billing-amount {
+    font-weight: 700;
+    color: #81C784;
+    font-size: 1.1rem;
+}
+
+.billing-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.billing-status.success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #81C784;
+    border: 1px solid #4CAF50;
+}
+
+.billing-status.pending {
+    background: rgba(255, 193, 7, 0.2);
+    color: #FFC107;
+    border: 1px solid #FFC107;
+}
+
+.billing-status.failed {
+    background: rgba(244, 67, 54, 0.2);
+    color: #F44336;
+    border: 1px solid #F44336;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.payment-type {
+    font-weight: 600;
+    color: white;
+}
+
+.payment-details {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.subscription-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.billing-history {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .billing-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .payment-method {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .subscription-actions {
+        flex-direction: column;
+    }
+    
+    .plan-status {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .subscription-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .current-plan,
+    .billing-section,
+    .payment-methods {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .subscription-header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Header navigation buttons styling */
+/* Zielony gradient dla przycisku "Powrót do panelu" */
+.auth-nav a[href*="my_account_client.html"] {
+    background: linear-gradient(135deg, #4CAF50, #45a049, #2e7d32) !important;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    border: none;
+}
+
+.auth-nav a[href*="my_account_client.html"]:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50, #388e3c) !important;
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Czerwony gradient dla przycisku "Wyloguj" */
+#logout-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333) !important;
+    border: none !important;
+}
+
+#logout-btn:hover {
+    background: linear-gradient(135deg, #c82333, #a71e2a) !important;
+    transform: translateY(-2px);
+}
+
+/* Dolny przycisk "Powrót do panelu" – ten sam wygląd co w headerze */
+.subscription-actions .back-panel-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049, #2e7d32);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.subscription-actions .back-panel-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50, #388e3c);
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px);
+}

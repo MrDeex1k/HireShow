@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Artysty - HIRE SHOW</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/find_artists.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="find_artists.html">Powrót do wyszukiwarki</a>
+            <a href="my_account_client.html">Panel klienta</a>
+            <a href="#" id="logout-btn">Wyloguj</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-photo">
+                    <img id="profile-photo" src="../assets/images/placeholder-avatar.jpg" alt="Profil artysty">
+                </div>
+                <div class="profile-info">
+                    <h1 id="artist-name">Artysta</h1>
+                    <p class="artist-type" id="artist-type">Typ</p>
+                    <p class="artist-location" id="artist-location">📍</p>
+                    <p class="online-reach" id="artist-reach">🌐 Zasięg online:</p>
+                    <div class="experience-level">
+                        <span id="artist-experience">Doświadczenie:</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-primary" id="contact-btn">Skontaktuj się</button>
+                    <button class="btn btn-secondary" id="favorite-btn">Dodaj do ulubionych</button>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h3>Biografia</h3>
+                    <p id="artist-bio"></p>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Typ artysty</h3>
+                    <div class="artist-type-badge">
+                        <span class="type-badge actor" id="artist-type-badge">Typ</span>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Cechy fizyczne</h3>
+                    <div class="physical-attributes">
+                        <div class="attribute-item"><span class="attribute-label">Wiek:</span><span class="attribute-value" id="attr-age">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Wzrost:</span><span class="attribute-value" id="attr-height">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Waga:</span><span class="attribute-value" id="attr-weight">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Biodra:</span><span class="attribute-value" id="attr-hip">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Talia:</span><span class="attribute-value" id="attr-waist">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Klatka:</span><span class="attribute-value" id="attr-cage">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Buty:</span><span class="attribute-value" id="attr-shoe">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Ubrania:</span><span class="attribute-value" id="attr-clothes">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Kolor oczu:</span><span class="attribute-value" id="attr-eyes">-</span></div>
+                        <div class="attribute-item"><span class="attribute-label">Kolor włosów:</span><span class="attribute-value" id="attr-hair">-</span></div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Doświadczenie zawodowe</h3>
+                    <div class="experience-content">
+                        <p>5 lat doświadczenia w branży teatralnej i filmowej. Główne role w spektaklach teatralnych, występy w produkcjach filmowych i telewizyjnych, doświadczenie w reklamach komercyjnych. Współpraca z renomowanymi reżyserami i producentami. Udział w warsztatach aktorskich i kursach doskonalących.</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Social Media</h3>
+                    <div class="social-media-links">
+                        <div id="social-links"></div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Galeria zdjęć</h3>
+                    <div class="photo-gallery" id="photo-gallery"></div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Informacje kontaktowe</h3>
+                    <div class="contact-info">
+                        <div class="contact-item"><span class="contact-label">Email:</span><span class="contact-value" id="contact-email">-</span></div>
+                        <div class="contact-item"><span class="contact-label">Telefon:</span><span class="contact-value" id="contact-phone">-</span></div>
+                        <div class="contact-item"><span class="contact-label">Miejsce zamieszkania:</span><span class="contact-value" id="contact-residence">-</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-profile-container"></div>
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/finded_artist_profile.js"></script>
+</body>
+</html>

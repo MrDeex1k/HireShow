@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustawienia Subskrypcji - HIRE SHOW</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/register_client.css">
+    <link rel="stylesheet" href="../assets/css/subscription_settings.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="my_account_client.html">Powrót do panelu</a>
+            <a href="#" id="logout-btn">Wyloguj</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="subscription-header">
+                <h1>Zarządzanie Subskrypcją</h1>
+                <p>Wybierz plan, który najlepiej odpowiada Twoim potrzebom</p>
+            </div>
+
+            <div class="current-plan" id="current-plan">
+                <div class="plan-info">
+                    <h3>Twój aktualny plan: <span id="current-plan-name">Free</span></h3>
+                    <p id="current-plan-description">Plan darmowy z podstawowymi funkcjami</p>
+                    <div class="plan-status">
+                        <span id="plan-status">Aktywny</span>
+                        <span id="next-billing" style="display: none;">Następna płatność: <span id="next-billing-date"></span></span>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="subscription-plans">
+                <div class="plan-option">
+                    <input type="radio" id="plan_free" name="subscription_type" value="free" checked disabled>
+                    <label for="plan_free" class="plan-label">
+                        <div class="plan-header">
+                            <h4>Plan Darmowy</h4>
+                            <span class="price">0 zł/miesiąc</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Przeglądanie podstawowych profili artystów</li>
+                            <li>Szybki kontakt z początkującymi artystami</li>
+                            <li>5 zapytań miesięcznie</li>
+                        </ul>
+                        <div class="current-plan-badge">Aktualny Plan</div>
+                    </label>
+                </div>
+                
+                <div class="plan-option">
+                    <input type="radio" id="plan_basic" name="subscription_type" value="basic">
+                    <label for="plan_basic" class="plan-label">
+                        <div class="plan-header">
+                            <h4>Plan Basic</h4>
+                            <span class="price">19 zł/miesiąc</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Wszystko z planu darmowego</li>
+                            <li>20 zapytań miesięcznie</li>
+                            <li>Dostęp do Social Mediów artystów</li>
+                        </ul>
+                        <button type="button" class="select-plan-btn" data-plan="basic">Wybierz Plan</button>
+                    </label>
+                </div>
+                
+                <div class="plan-option premium">
+                    <input type="radio" id="plan_premium" name="subscription_type" value="premium">
+                    <label for="plan_premium" class="plan-label">
+                        <div class="plan-header">
+                            <h4>Plan Premium</h4>
+                            <span class="price">39 zł/miesiąc</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Wszystko z planu Basic</li>
+                            <li>Dostęp do profili Premium</li>
+                            <li>Bezpośredni kontakt z artystami (telefon/email)</li>
+                        </ul>
+                        <div class="premium-badge">Najpopularniejszy</div>
+                        <button type="button" class="select-plan-btn" data-plan="premium">Wybierz Plan</button>
+                    </label>
+                </div>
+            </div>
+
+            <div class="billing-section" id="billing-section" style="display: none;">
+                <h3>Historia płatności</h3>
+                <div class="billing-history">
+                    <div class="billing-item">
+                        <div class="billing-info">
+                            <span class="billing-date">2024-01-15</span>
+                            <span class="billing-plan">Plan Standard</span>
+                        </div>
+                        <div class="billing-amount">99 PLN</div>
+                        <div class="billing-status success">Opłacone</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-methods" id="payment-methods" style="display: none;">
+                <h3>Metody płatności</h3>
+                <div class="payment-method">
+                    <div class="payment-info">
+                        <span class="payment-type">Karta kredytowa</span>
+                        <span class="payment-details">•••• •••• •••• 1234</span>
+                    </div>
+                    <button class="btn btn-secondary btn-small">Edytuj</button>
+                </div>
+                <button class="btn btn-primary">Dodaj metodę płatności</button>
+            </div>
+
+            <div class="subscription-actions">
+                <button class="btn btn-secondary" id="cancel-subscription" style="display: none;">Anuluj subskrypcję</button>
+                <a href="my_account_client.html" class="btn back-panel-btn">Powrót do panelu</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/subscription_settings.js"></script>
+</body>
+</html>

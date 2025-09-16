@@ -1,0 +1,214 @@
+.account-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.account-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.account-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+#user-name {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+/* Subscription badge */
+.subscription-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.subscription-free {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.subscription-basic {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.subscription-premium {
+    background: linear-gradient(135deg, #FF6B35, #F7931E);
+    color: white;
+}
+
+.auth-nav a[href*="index.html"] {
+    background: linear-gradient(135deg, #4CAF50, #45a049, #2e7d32) !important;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    border: none;
+}
+
+.auth-nav a[href*="index.html"]:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50, #388e3c) !important;
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px);
+}
+
+.admin-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.account-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.section-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.section-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.section-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.admin-card {
+    border-left: 4px solid #dc3545;
+}
+
+.admin-card:hover {
+    border-left-color: #c82333;
+    box-shadow: 0 8px 25px rgba(220, 53, 69, 0.2);
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    min-width: 150px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268, #495057);
+    box-shadow: 0 6px 12px rgba(108, 117, 125, 0.4);
+    transform: translateY(-2px);
+}
+
+#logout-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333) !important;
+    border: none !important;
+}
+
+#logout-btn:hover {
+    background: linear-gradient(135deg, #c82333, #a71e2a) !important;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .account-sections {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .section-card {
+        padding: 1.5rem;
+    }
+    
+    .account-header {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .account-header h1 {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-header {
+        padding: 1rem;
+    }
+    
+    .account-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-card {
+        padding: 1rem;
+    }
+    
+    .section-card h3 {
+        font-size: 1.3rem;
+    }
+}

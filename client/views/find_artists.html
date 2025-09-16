@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyszukiwarka Artystów - HIRE SHOW</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/find_artists.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="my_account_client.html" class="back-to-panel">Powrót do panelu</a>
+            <a href="#" id="logout-btn">Wyloguj</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="search-header">
+                <h1>Wyszukiwarka Artystów</h1>
+                <p>Znajdź idealnych artystów dla swoich projektów</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-filters">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="artist-type">Typ artysty</label>
+                            <select id="artist-type">
+                                <option value="">Wszystkie</option>
+                                <option value="actor">Aktor/ka</option>
+                                <option value="model">Model/ka</option>
+                                <option value="influencer">Influencer</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group experience-filter">
+                            <label>Doświadczenie (1-5)</label>
+                            <div class="experience-dots" id="experience-filter">
+                                <span class="dot" data-value="1"></span>
+                                <span class="dot" data-value="2"></span>
+                                <span class="dot" data-value="3"></span>
+                                <span class="dot" data-value="4"></span>
+                                <span class="dot" data-value="5"></span>
+                            </div>
+                            <input type="hidden" id="experience" value="0">
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="location">Miejsce zamieszkania</label>
+                            <input type="text" id="location" placeholder="Miasto, województwo...">
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary" id="toggle-more-filters" style="width: fit-content;">Zaawansowane filtry</button>
+
+                    <div id="more-filters" style="display: none;">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="age-min">Wiek (min)</label>
+                            <input type="number" id="age-min" placeholder="np. 18" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="age-max">Wiek (max)</label>
+                            <input type="number" id="age-max" placeholder="np. 65" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="height-min">Wzrost (min, cm)</label>
+                            <input type="number" id="height-min" placeholder="np. 160" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="height-max">Wzrost (max, cm)</label>
+                            <input type="number" id="height-max" placeholder="np. 200" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="weight-min">Waga (min, kg)</label>
+                            <input type="number" id="weight-min" placeholder="np. 50" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="weight-max">Waga (max, kg)</label>
+                            <input type="number" id="weight-max" placeholder="np. 120" min="0">
+                        </div>
+                    </div>
+
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="hip-min">Biodra (min, cm)</label>
+                            <input type="number" id="hip-min" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="hip-max">Biodra (max, cm)</label>
+                            <input type="number" id="hip-max" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="waist-min">Talia (min, cm)</label>
+                            <input type="number" id="waist-min" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="waist-max">Talia (max, cm)</label>
+                            <input type="number" id="waist-max" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="cage-min">Klatka piersiowa (min, cm)</label>
+                            <input type="number" id="cage-min" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="cage-max">Klatka piersiowa (max, cm)</label>
+                            <input type="number" id="cage-max" min="0">
+                        </div>
+                    </div>
+
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="shoe-size-min">Rozmiar buta (min)</label>
+                            <input type="number" id="shoe-size-min" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="shoe-size-max">Rozmiar buta (max)</label>
+                            <input type="number" id="shoe-size-max" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="clothes-size-min">Rozmiar ubrań (min)</label>
+                            <input type="number" id="clothes-size-min" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="clothes-size-max">Rozmiar ubrań (max)</label>
+                            <input type="number" id="clothes-size-max" min="0">
+                        </div>
+                        <div class="filter-group">
+                            <label for="online-reach-min">Zasięg online (min)</label>
+                            <input type="number" id="online-reach-min" min="0" placeholder="np. 10000">
+                        </div>
+                        <div class="filter-group">
+                            <label for="online-reach-max">Zasięg online (max)</label>
+                            <input type="number" id="online-reach-max" min="0" placeholder="np. 500000">
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="search-actions">
+                        <button type="button" class="btn btn-secondary" id="clear-filters">Wyczyść filtry</button>
+                        <button type="button" class="btn btn-primary" id="search-btn">Wyszukaj</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-header">
+                    <h3 id="results-count">Znaleziono 0 artystów</h3>
+                </div>
+
+                <div class="artists-grid" id="artists-grid">
+                </div>
+
+                <div class="pagination" id="pagination">
+                </div>
+            </div>
+
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <h3>Nie znaleziono artystów</h3>
+                    <p>Spróbuj zmienić kryteria wyszukiwania lub rozszerzyć filtry.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/find_artists.js"></script>
+</body>
+</html>

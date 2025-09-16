@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja Artysty - HIRE SHOW</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/register_artist_choose.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="hash">#</span><span class="text">HIRE<br>SHOW</span></h1>
+        </div>
+        <nav class="auth-nav">
+            <a href="../index.html">Strona główna</a>
+            <a href="register_first.html">Powrót</a>
+            <a href="login.html">Logowanie</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="user-registration-section" class="registration-section">
+                <h2>Rejestracja Artysty - Dane Użytkownika</h2>
+                <form id="user-registration-form" class="registration-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Hasło:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Potwierdź hasło:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Zaakceptuj dane</button>
+                </form>
+                <div id="user-error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <div id="artist-type-selection" class="artist-type-section" style="display: none;">
+                <h2>Wybierz typ artysty</h2>
+                <div class="artist-type-buttons">
+                    <button type="button" class="artist-type-btn" data-type="influencer">
+                        <span class="btn-text">INFLUENCER</span>
+                    </button>
+                    <button type="button" class="artist-type-btn" data-type="actor">
+                        <span class="btn-text">ACTOR</span>
+                    </button>
+                    <button type="button" class="artist-type-btn" data-type="model">
+                        <span class="btn-text">MODEL</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../assets/js/footerLoader.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/register_artist_choose.js"></script>
+</body>
+</html>

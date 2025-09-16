@@ -1,0 +1,111 @@
+/* Global Font Definitions */
+
+/* CSS Variables for colors */
+:root {
+    --primary-color: #FF69B4;
+    --accent-color: #FF1493;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --background-light: #ffffff;
+    --border-color: #e1e5e9;
+}
+
+/* H1 - Anton */
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+}
+
+/* H2 - Poppins (pogrubienie) */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Treść - Poppins */
+p, span, div, article, section {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* Pozostałe - Poppins Italic (zastępuje Garet) */
+a, button, nav, ul, li, label, input, textarea, select {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Reset podstawowy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Dekoracyjne obrazy po lewej i prawej stronie treści */
+.container {
+    position: relative;
+}
+
+.decor-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.decor-image.left { left: -250px; }
+.decor-image.right { right: -250px; }
+
+/* Strona główna: układ 2+2 (góra/dół po obu stronach) */
+body.page-home .decor-image.stack-top { margin-top: 180px; }
+body.page-home .decor-image.stack-bottom { margin-top: -180px; }
+/* Podnieś wszystkie obrazy na stronie głównej, aby nie wchodziły pod stopkę */
+body.page-home .decor-image { margin-top: 0px; }
+
+/* Panel admina i klienta: pod headerem, poza kartami */
+body.page-admin .decor-image,
+body.page-client .decor-image { 
+    top: 200px;
+    transform: none;
+}
+/* W panelu admina odsuń mocniej na boki */
+body.page-admin .decor-image.left { left: -250px; }
+body.page-admin .decor-image.right { right: -250px; }
+
+@media (max-width: 992px) {
+    .decor-image { width: 200px; height: 200px; }
+    .decor-image.left { left: -90px; }
+    .decor-image.right { right: -90px; }
+    body.page-home .decor-image.stack-top { margin-top: -120px; }
+    body.page-home .decor-image.stack-bottom { margin-top: 120px; }
+    body.page-home .decor-image { margin-top: -14px; }
+    body.page-admin .decor-image.left { left: -120px; }
+    body.page-admin .decor-image.right { right: -120px; }
+}
+
+@media (max-width: 768px) {
+    .decor-image { width: 140px; height: 140px; }
+    .decor-image.left { left: -60px; }
+    .decor-image.right { right: -60px; }
+    body.page-home .decor-image.stack-top { margin-top: -90px; }
+    body.page-home .decor-image.stack-bottom { margin-top: 90px; }
+    body.page-home .decor-image { margin-top: -10px; }
+    body.page-admin .decor-image.left { left: -70px; }
+    body.page-admin .decor-image.right { right: -70px; }
+}
+
+@media (max-width: 576px) 
+{
+    .decor-image {
+        display: none;
+    }
+}

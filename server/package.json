@@ -1,0 +1,21 @@
+{
+  "name": "HIRE SHOW",
+  "version": "1.0.0",
+  "description": "Server for HIRE SHOW platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "stop": "kill $(lsof -t -i:6677 || echo -1) || echo 'No process on port 6677 to stop'"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-jwt": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3",
+    "multer": "^2.0.2",
+    "sharp": "^0.34.2"
+  }
+}
