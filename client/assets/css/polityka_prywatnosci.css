@@ -61,6 +61,7 @@ header {
 main {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
@@ -92,6 +93,10 @@ main {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    text-align: justify;
 }
 
 /* Footer container */

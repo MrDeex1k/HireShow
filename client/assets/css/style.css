@@ -55,19 +55,19 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     pointer-events: none;
     z-index: 2;
 }
 
-.decor-image.left { left: -250px; }
-.decor-image.right { right: -250px; }
+.decor-image.left { left: -200px; }
+.decor-image.right { right: -200px; }
 
 /* Strona główna: układ 2+2 (góra/dół po obu stronach) */
-body.page-home .decor-image.stack-top { margin-top: 180px; }
-body.page-home .decor-image.stack-bottom { margin-top: -180px; }
+body.page-home .decor-image.stack-top { margin-top: 150px; }
+body.page-home .decor-image.stack-bottom { margin-top: -150px; }
 /* Podnieś wszystkie obrazy na stronie głównej, aby nie wchodziły pod stopkę */
 body.page-home .decor-image { margin-top: 0px; }
 
